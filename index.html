@@ -4,8 +4,14 @@
 	<title>Star Wars Selfie Station</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="./pswp/photoswipe.css">
-	<style>
+
+	<!--
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+	-->
+
+	<link type="text/css" rel="stylesheet" href="./pswp/photoswipe.css">
+	<style type="text/css">
 		@font-face {
 			font-family: 'star_jediregular';
 			src: url('./fonts/starjedi.woff2') format('woff2'),
@@ -25,7 +31,30 @@
 </head>
 <body>
 	<h1 style="text-align: center;"># Star Wars Selfie Station $</h1>
-	<div style="text-align: center;" class="pswp-gallery pswp-gallery--single-column" id="gallery--zoom-transition">
+	<!--
+	<div class="slider slider-for slick-slider">
+		<div><h3>1</h3></div>
+		<div><h3>2</h3></div>
+		<div><h3>3</h3></div>
+		<div><h3>4</h3></div>
+		<div><h3>5</h3></div>
+		<div><h3>6</h3></div>
+	</div>
+	<div class="slider slider-nav slick-slider slick-dotted" role="toolbar">
+		<div><h3>1</h3></div>
+		<div><h3>2</h3></div>
+		<div><h3>3</h3></div>
+		<div><h3>4</h3></div>
+		<div><h3>5</h3></div>
+		<div><h3>6</h3></div>
+	</div>
+	-->
+
+	<!--
+	<button id="btn-open-pswp-from-arr-lightbox" type="button">Select Image</button>
+	-->
+
+	<div style="text-align: center;" class="pswp-gallery pswp-gallery--native-fs" id="gallery--zoom-transition">
 		<a href="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-20-1.jpg" data-pswp-width="1920" data-pswp-height="1080" target="blank" rel="noopener">
 			<img src="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-20-1-300x169.jpg" alt="Star Wars virtual background: Astroid field" />
 		</a>
@@ -59,11 +88,9 @@
 		<a href="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-30.jpg" data-pswp-width="1920" data-pswp-height="1080" target="blank" rel="noopener">
 			<img src="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-30-300x169.jpg" alt="Star Wars virtual background: Hoth" />
 		</a>
-		<!--
 		<a href="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-12-1.jpg" data-pswp-width="1920" data-pswp-height="1080" target="blank" rel="noopener">
 			<img src="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-12-1-300x169.jpg" alt="Star Wars virtual background: Imperial Star Destroyer bridge" />
 		</a>
-		-->
 		<a href="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-06.jpg" data-pswp-width="1920" data-pswp-height="1080" target="blank" rel="noopener">
 			<img src="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-06-300x169.jpg" alt="Star Wars virtual background: Jakku" />
 		</a>
@@ -112,11 +139,9 @@
 		<a href="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-26.jpg" data-pswp-width="1920" data-pswp-height="1080" target="blank" rel="noopener">
 			<img src="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-26-300x169.jpg" alt="Star Wars virtual background: Snoke's Star Destroyer" />
 		</a>
-		<!--
 		<a href="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg" data-pswp-width="1920" data-pswp-height="1080" target="blank" rel="noopener">
 			<img src="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25-300x169.jpg" alt="Star Wars virtual background: starfield" />
 		</a>
-		-->
 		<a href="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-05.jpg" data-pswp-width="1920" data-pswp-height="1080" target="blank" rel="noopener">
 			<img src="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-05-300x169.jpg" alt="Star Wars virtual background: Starkiller base" />
 		</a>
@@ -127,7 +152,31 @@
 			<img src="https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-19-300x169.jpg" alt="Star Wars virtual background: Tatooine" />
 		</a>
 	</div>
-	
+
+	<!--
+	<script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '.slider-nav'
+			});
+			$('.slider-nav').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				asNavFor: '.slider-for',
+				dots: true,
+				centerMode: true,
+				focusOnSelect: true
+			});
+		});
+	</script>
+	-->
 
 	<script type="module">
 		import PhotoSwipeLightbox from './pswp/photoswipe-lightbox.esm.js';
@@ -166,7 +215,264 @@
 		});
 		}
 
-		const lightbox = new PhotoSwipeLightbox({
+		/* :::START::: fullscreen lightbox using javascript datasource 
+		const options = {
+			dataSource: [
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-20-1.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Astroid field'
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-16.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Cloud City'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-23.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Coruscant'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-08.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Death Star (view form control room)'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-36-1.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Death Star ruins'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-38.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Death Star ruins'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-37.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Death Star ruins'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-24.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: The Emperor throne on Exegol'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-32.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Hoth'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-31.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Hoth'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-30.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Hoth'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-12-1.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Imperial Star Destroyer bridge'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-06.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Jakku'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-27.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Kylo Ren Star Destroyer'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-14.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: lightspeed'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-39.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: The Millennium Falcon'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-29.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: The Millennium Falcon'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-15.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: the Millennium Falcon'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-13.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: The Millennium Falcon'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-35.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Pasaana'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-10.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Rebel base'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-11.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Rebel base'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-09.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Rebel base'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-38-1.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: resistance base'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-01.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: resistance base'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-04.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: resistance base'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-28.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Scarif Imperial Vault'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-26.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Snoke Star Destroyer'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: starfield'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-05.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Starkiller base'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-18.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Tatooine'
+
+				},
+				{
+					src: 'https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-19.jpg', 
+					width: 1920, 
+					height: 1080, 
+					alt: 'Star Wars virtual background: Tatooine'
+
+				}
+			],
+
+			gallery: '#gallery--zoom-transition',
+			showHideAnimationType: 'zoom',
+			pswpModule: () => import('./pswp/photoswipe.esm.js'),
+
+			// Add function that returns promise
+			openPromise: getFullscreenPromise,
+			
+			// Append PhotoSwipe to our container
+			appendToEl: fullscreenAPI ? pswpContainer : document.body,
+
+			// disable opening/closing animations
+			showAnimationDuration: 0,
+			hideAnimationDuration: 0,
+
+			// Add if you're using responsive images
+			// since viewport size is unpredictable
+			// at initialization
+			preloadFirstSlide: false
+
+		};
+		const lightbox = new PhotoSwipeLightbox(options);
+		lightbox.init();
+
+		document.querySelector('#btn-open-pswp-from-arr-lightbox').onclick = () => {
+			lightbox.loadAndOpen(0); // defines start slide index
+		};
+		/* :::END::: */
+
+		/* ::START:: fullscreen lightbox using <a> html elements */
+			const lightbox = new PhotoSwipeLightbox({
 			gallery: '#gallery--zoom-transition',
 			children: 'a',
 			showHideAnimationType: 'zoom',
@@ -195,6 +501,8 @@
 		}
 		});
 		lightbox.init();
+		/* :::END::: */
+
 
 		// Simple fullscreen API helper,
 		// supports unprefixed and webkit-prefixed versions
