@@ -1,11 +1,11 @@
 <!doctype html>
 <head>
-    <link type="text/css" rel="stylesheet" href="./photoswipe.css">
+    <link type="text/css" rel="stylesheet" href="./pswp/photoswipe.css">
 	<style>
 		@font-face {
 			font-family: 'star_jediregular';
-			src: url('starjedi.woff2') format('woff2'),
-				url('starjedi.woff') format('woff');
+			src: url('./fonts/starjedi.woff2') format('woff2'),
+				url('./fonts/starjedi.woff') format('woff');
 			font-weight: normal;
 			font-style: normal;
 		}
@@ -126,7 +126,7 @@
 	
 
 	<script type="module">
-		import PhotoSwipeLightbox from './photoswipe-lightbox.esm.js';
+		import PhotoSwipeLightbox from './pswp/photoswipe-lightbox.esm.js';
 
 		// Simple fullscreen API
 		const fullscreenAPI = getFullscreenAPI();
@@ -166,7 +166,7 @@
 			gallery: '#gallery--zoom-transition',
 			children: 'a',
 			showHideAnimationType: 'zoom',
-			pswpModule: () => import('./photoswipe.esm.js'),
+			pswpModule: () => import('./pswp/photoswipe.esm.js'),
 
 			// Add function that returns promise
 			openPromise: getFullscreenPromise,
